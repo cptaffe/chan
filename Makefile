@@ -11,7 +11,7 @@ SRC = chan.c list.c
 OBJ = $(SRC:.c=.o)
 LIB = chan.a
 
-$(LIB): test $(OBJ)
+$(LIB): $(OBJ)
 	ar rcs $(LIB) $(OBJ)
 
 
