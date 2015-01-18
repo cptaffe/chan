@@ -2,8 +2,8 @@
 // Copyright 2015 Connor Taffe <cpaynetaffe@gmail.com>
 // This program is free software licensed under the MIT license.
 
-#ifndef CHAN_H_
-#define CHAN_H_
+#ifndef CHAN_CHAN_H_
+#define CHAN_CHAN_H_
 
 #include <pthread.h>
 
@@ -32,4 +32,4 @@ int chan_empty(chan *ch);
 int chan_alive(chan *ch);
 void chan_kill(chan *ch);
 
-#endif // CHAN_H_
+#endif // CHAN_CHAN_H_

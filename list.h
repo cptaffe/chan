@@ -2,8 +2,8 @@
 // Copyright 2015 Connor Taffe <cpaynetaffe@gmail.com>
 // This program is free software licensed under the MIT license.
 
-#ifndef LIST_H_
-#define LIST_H_
+#ifndef CHAN_LIST_H_
+#define CHAN_LIST_H_
 
 // list struct
 typedef struct list {
@@ -19,4 +19,4 @@ void free_list(list *ls);
 int list_rm(list *ls); // remove next node
 int list_ins(list *ls, list *next); // inserts as next node
 
-#endif // LIST_H_
+#endif // CHAN_LIST_H_
