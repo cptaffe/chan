@@ -9,7 +9,7 @@ CFLAGS += -g
 
 SRC = chan.c list.c
 OBJ = $(SRC:.c=.o)
-LIB = ds.a
+LIB = chan.a
 
 $(LIB): test $(OBJ)
 	ar rcs $(LIB) $(OBJ)
