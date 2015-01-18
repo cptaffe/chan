@@ -5,18 +5,25 @@
 # This makefile generates a static library,
 # this library contains all the data structures used.
 
-CFLAGS += -g -I$(INCLUDE)
+CFLAGS += -g
 
 SRC = chan.c list.c
 OBJ = $(SRC:.c=.o)
 LIB = ds.a
 
-$(LIB): $(OBJ)
+$(LIB): test $(OBJ)
 	ar rcs $(LIB) $(OBJ)
 
 
 $(OBJ):
 	$(CC) $(CFLAGS) -c $(SRC)
+
+# test for proper functionality
+test: $(OBJ)
+	$(CC) $(CFLAGS) -c main.c
+	$(CC) $(CFLAGS) -o test $(OBJ) main.o
+	./test
+	$(RM) test main.o
 
 chan.o: chan.h list.h
 list.o: list.h
